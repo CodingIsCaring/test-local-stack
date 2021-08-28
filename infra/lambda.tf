@@ -10,11 +10,11 @@ resource "aws_lambda_function" "test_lambda" {
   function_name = "test_lambda"
   filename      = "${path.module}/test_lambda.zip"
   role          = aws_iam_role.test_lambda.arn
-  handler       = "test_lambda.py"
+  handler       = "test_lambda.handler"
 
   source_code_hash = module.lambda-python-archive.source_code_hash
 
-  runtime = "python3.9"
+  runtime = "python3.8"
 
   environment {
     variables = {

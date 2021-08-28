@@ -2,3 +2,4 @@
 *.terraform*
 */test_lambda.zip
 */terraform.tfstate*
+localstack/out.json
