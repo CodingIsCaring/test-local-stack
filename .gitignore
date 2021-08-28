@@ -1,5 +1,5 @@
 .idea
 .terraform
-.terraform.lock.hcl
+*.terraform.lock.hcl
 *terraform.tfstate*
-test_lambda.zip
+infra/test_lambda.zip
