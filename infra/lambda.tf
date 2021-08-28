@@ -8,7 +8,7 @@ module "lambda-python-archive" {
 
 resource "aws_lambda_function" "test_lambda" {
   function_name = "test_lambda"
-  filename      = "test_lambda.zip"
+  filename      = "${path.module}/test_lambda.zip"
   role          = aws_iam_role.test_lambda.arn
   handler       = "test_lambda.py"
 
